@@ -1,21 +1,20 @@
-createVehicle(Vehicle) ;
-    if (Vehicle instanceof Vehicle) {
-      this.Vehicles.push(Vehicle);
-    } else {
-      console.error("Invalid vehicle object");
-    }
-  
-
-  listVehicles() ;
-    return this.Vehicles
-  
-
-  paintVehicles(vin, paintColor) ;
-    constructor (Vehicle = this.Vehicles);
-    if (vehicle) {
-      paintVehicles(paintColor);
-    } else {
-        console.log("blue");
+class Factory {
+  constructor(location, owner){
+  this.location = location
+  this.owner = owner
+  this.vehicles = []
   }
-  
-  
+
+createVehicle(vehicle){
+  this.vehicles.push(vehicle)
+}
+
+paintVehicle(vin, paintColor){ 
+    let vIndex = this.vehicles.findIndex(v => v.vin === vin)
+    this.vehicles[vIndex].paint(paintColor)
+}
+
+listVehicles(){
+  return this.vehicles
+}
+}
