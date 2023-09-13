@@ -1,4 +1,5 @@
 class Factory {
+  
   constructor(location, owner){
   this.location = location
   this.owner = owner
@@ -9,9 +10,9 @@ createVehicle(vehicle){
   this.vehicles.push(vehicle)
 }
 
-paintVehicle(vin, paintColor){ 
+paintVehicle(vin, paintcolor){ 
     let vIndex = this.vehicles.findIndex(v => v.vin === vin)
-    this.vehicles[vIndex].paint(paintColor)
+    this.vehicles[vIndex].paint(paintcolor)
 }
 
 listVehicles(){

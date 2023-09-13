@@ -1,4 +1,5 @@
 class Vehicle {
+  
     constructor(make, model, year, price, vin) {
       this.make = make
       this.model = model
@@ -9,7 +10,7 @@ class Vehicle {
     }
   
     paint(color) {
-    return this.color = color
+        this.color = color
     }
   
     drive() {
